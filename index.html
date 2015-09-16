@@ -2,57 +2,101 @@
 <html lang="en">
 <head>
 
-	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-	<link href="bower_components/angular-xeditable/dist/css/xeditable.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+
+	<!-- Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="/css/bootstrap.css" rel="stylesheet">
-    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="/bower_components/jquery/dist/jquery.min.js">
-    <link rel="stylesheet" href="css/custom.css" type="text/css"/>
+	<link href="/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="/bower_components/jquery/dist/jquery.min.js">
+	<link href="css/custom.css" rel="stylesheet" type="text/css"/>
 
-    <style>
-.bg {
-  background: url('/flag.jpg') no-repeat center center;
-  position: fixed;
-  width: 100%;
-  height: 350px; /*same height as jumbotron */
-  top:0;
-  left:0;
-  z-index: -1;
-}
+	<style>
 
-.jumbotron {
-  height: 350px;
-  color: white;
-  text-shadow: #444 0 1px 1px;
-  background:transparent;
-}
-    </style>
+	.bg {
+		background: url('/flag.jpg') no-repeat center center;
+		position: fixed;
+		width: 100%;
+		height: 350px; /*same height as jumbotron */
+		top:0;
+		left:0;
+		z-index: -1;
+		overflow: scroll;
+	}
+
+	.jumbotron {
+		height: 600px;
+		color: white;
+		text-shadow: #444 0 1px 1px;
+		background:transparent;
+	}
+	
+	</style>
 
 	<!--Icluding AngularJS core library-->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
 
-	<meta charset="UTF-8">
-	<title>Document</title>
 </head>
 <body ng-app='PresApp'>
 	<div class="main" ng-controller="MainController">
 		<div class="bg">
-			<div class="jumbotron">
-				<h1>What Kind of President Would You Be?</h1> 
-				<p> A quick and easy questionaire on our nation's current issues that will match you with today's presidential candidates! </p>
+			<div class="container jumbotron">
+				<h1 class="text-center">What Kind of President Would You Be?</h1> 
+				<div class="text-center"><a href="#" class="btn btn-default">Take the Quiz!</a></div>
 			</div>
 			<div class="container">
+				<hr class="">
 				<div class="row">
-					<p>This is another paragraph.</p> 
-					<p>This is a paragraph.</p> 
-					<p>This is another paragraph.</p>
+					<div class="col-md-4">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="">Candidates</h3>
+							</div>
+							<div class="panel-body">Quick facts about each candidate.</div>
+							<div class="panel-footer text-right"><a href="#" class="btn btn-default">More</a>
+
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="">What's in the news?</h3>
+							</div>
+							<div class="panel-body">Read articles about the current candidates.</div>
+							<div class="panel-footer text-right"><a href="#" class="btn btn-default">More</a>
+
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="">Debates</h3>
+							</div>
+							<div class="panel-body">Watch all the debates here!</div>
+							<div class="panel-footer text-right"><a href="#" class="btn btn-default">More</a>
+
+							</div>
+						</div>
+					</div>
 				</div>
+				<!--/row-->
+				<hr class="">
 			</div>
 		</div>
 	</div>
+</div>
 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="bower_components/angular-xeditable/dist/js/xeditable.js"></script>
+<script src="app.js"></script>
+<script>
 
-	<script src="bower_components/angular-xeditable/dist/js/xeditable.js"></script>
-	<script src="app.js"></script>
+</script>
 </body>
 </html>
